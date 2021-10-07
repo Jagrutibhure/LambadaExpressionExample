@@ -1,0 +1,80 @@
+Exampl1 1
+
+package LambadaEXample;
+@FunctionalInterface
+interface Singing{
+	public void song();
+}
+public class LambdaFunctionExample1 {
+public static void main (String args[]) {
+	int width = 1234;
+	Singing s2=()->{
+		System.out.println("Singing " +width);
+	};
+	s2.song();
+}
+}
+
+Example 2
+
+package LambadaEXample;
+
+interface Addition{
+	int add(int a, int b);
+}
+public class LambdaExample2 {
+	public static void main(String args[]) {
+		Addition A1 = (a,b)->(a+b);
+		System.out.println(A1.add(20, 30));
+		Addition A2 = (int a, int b)->a+b;
+		System.out.println(A2.add(40, 50));
+	}
+
+}
+
+Example 3
+
+package LambadaEXample;
+interface Sayable{
+ public String say();
+}
+public class LambdaExample3 {
+public static void main(String args[]) {
+	Sayable s = ()->{
+		return " This is Sayable ";
+	};
+	System.out.println(s.say());
+	
+}
+}
+
+Example 4
+
+package LambadaEXample;
+
+import java.util.ArrayList;
+
+public class LambdaExample4 {
+public static void main(String argas[]) {
+	ArrayList<Integer> numbers = new ArrayList<Integer>();
+	numbers.add(3);
+	numbers.add(4);
+	numbers.add(5);
+	numbers.add(6);
+	numbers.add(7);
+	numbers.forEach ( (n)->{System.out.println(n);});	
+}
+}
+
+Example 5
+
+package LambadaEXample;
+interface Printable{
+	void print(String message);
+}
+public class LambdaExample5 {
+public static void main(String args[]) {
+	Printable printable = (message)->System.out.println(message);
+printable.print("Lambda Example with single parameter");
+}
+}
